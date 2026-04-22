@@ -1,0 +1,54 @@
+{
+  "name": "vscode-rmlui",
+  "displayName": "RmlUi Support",
+  "description": "Syntax support for RML and RCSS, assuming Lua scripting.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "rml",
+        "aliases": [
+          "RML",
+          "rml"
+        ],
+        "extensions": [
+          ".rml"
+        ]
+      },
+      {
+        "id": "rcss",
+        "aliases": [
+          "RCSS",
+          "rcss"
+        ],
+        "extensions": [
+          ".rcss"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rml",
+        "scopeName": "text.rml",
+        "path": "./syntaxes/rml.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.lua": "lua",
+          "meta.embedded.block.rcss": "rcss",
+          "source.lua": "lua",
+          "source.rcss": "rcss"
+        }
+      },
+      {
+        "language": "rcss",
+        "scopeName": "source.rcss",
+        "path": "./syntaxes/rcss.tmLanguage.json"
+      }
+    ]
+  }
+}

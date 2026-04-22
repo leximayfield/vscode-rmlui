@@ -1,0 +1,250 @@
+{
+	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
+	"name": "RML",
+	"scopeName": "text.rml",
+	"patterns": [
+		{
+			"include": "#eval"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"eval": {
+			"begin": "\\{\\{",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.rml"
+				}
+			},
+			"end": "\\}\\}",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.rml"
+				}
+			},
+			"patterns": [
+				{
+					"match": "[A-Za-z][A-Za-z0-9_]*\\s*\\(",
+					"name": "support.function"
+				},
+				{
+					"match": "[A-Za-z][A-Za-z0-9_]*",
+					"name": "variable.other.rml"
+				},
+				{
+					"match": "[0-9-][0-9]*",
+					"name": "constant.numeric.rml"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"comment": "Named entities",
+					"match": "(&)(lt|gt|amp|quot)(;)",
+					"name": "constant.character.entity.named.$2.html",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.entity.html"
+						},
+						"3": {
+							"name": "punctuation.definition.entity.html"
+						}
+					}
+				},
+				{
+					"comment": "Hex unicode entities",
+					"match": "(&)#[xX][0-9a-fA-F]+(;)",
+					"name": "constant.character.entity.numeric.hexadecimal.html",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.entity.html"
+						},
+						"3": {
+							"name": "punctuation.definition.entity.html"
+						}
+					}
+				},
+				{
+					"comment": "Decimal unicode entities",
+					"match": "(&)#[0-9]+(;)",
+					"name": "constant.character.entity.numeric.decimal.html",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.entity.html"
+						},
+						"3": {
+							"name": "punctuation.definition.entity.html"
+						}
+					}
+				}
+			]
+		},
+		"attribute": {
+			"patterns": [
+				{
+					"match": "(on[a-zA-Z0-9_-]*)\\s*=\\s*\"([^\"]*)\"",
+					"captures": {
+						"1": {
+							"name": "entity.other.attribute-name.html"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "source.lua"
+								}
+							]
+						}
+					}
+				},
+				{
+					"match": "([a-zA-Z_][a-zA-Z0-9_-]*)\\s*=\\s*(\"[^\"]*\")",
+					"captures": {
+						"1": {
+							"name": "entity.other.attribute-name.html"
+						},
+						"2": {
+							"name": "string.quoted.double.html"
+						}
+					}
+				},
+				{
+					"match": "[a-zA-Z_][a-zA-Z0-9_-]*",
+					"captures": {
+						"0": {
+							"name": "entity.other.attribute-name.html"
+						}
+					}
+				}
+			]
+		},
+		"tags": {
+			"patterns": [
+				{
+					"begin": "(<)(script)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.tag.begin.html"
+						},
+						"2": {
+							"name": "entity.name.tag.html"
+						}
+					},
+					"end": "(</)(script)(>)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.tag.begin.html"
+						},
+						"2": {
+							"name": "entity.name.tag.html"
+						},
+						"3": {
+							"name": "punctuation.definition.tag.end.html"
+						}
+					},
+					"name": "meta.embedded.block.lua",
+					"contentName": "source.lua",
+					"patterns": [
+						{
+							"include": "source.lua"
+						}
+					]
+				},
+				{
+					"begin": "(<)(style)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.tag.begin.html"
+						},
+						"2": {
+							"name": "entity.name.tag.html"
+						}
+					},
+					"end": "(</)(style)(>)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.tag.begin.html"
+						},
+						"2": {
+							"name": "entity.name.tag.html"
+						},
+						"3": {
+							"name": "punctuation.definition.tag.end.html"
+						}
+					},
+					"name": "meta.embedded.block.rcss",
+					"contentName": "source.rcss",
+					"patterns": [
+						{
+							"include": "source.rcss"
+						}
+					]
+				},
+				{
+					"begin": "(<)([a-zA-Z][.0-9-_a-zA-Z]*)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.tag.begin.html"
+						},
+						"2": {
+							"name": "entity.name.tag.html"
+						}
+					},
+					"end": "/?>",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.tag.end.html"
+						}
+					},
+					"name": "meta.tag.custom.start.html",
+					"patterns": [
+						{
+							"include": "#attribute"
+						}
+					]
+				},
+				{
+					"begin": "(</)([a-zA-Z][.0-9-_a-zA-Z]*)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.tag.begin.html"
+						},
+						"2": {
+							"name": "entity.name.tag.html"
+						}
+					},
+					"end": ">",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.tag.end.html"
+						}
+					},
+					"name": "meta.tag.custom.end.html",
+					"patterns": [
+						{
+							"include": "#attribute"
+						}
+					]
+				}
+			]
+		},
+		"comment": {
+			"begin": "<!--",
+			"captures": {
+				"0": {
+					"name": "punctuation.definition.comment.html"
+				}
+			},
+			"end": "-->",
+			"name": "comment.block.html"
+		}
+	}
+}
