@@ -12,6 +12,7 @@
   "repository": {
     "url": "https://github.com/leximayfield/vscode-rmlui"
   },
+  "readme": "README.md",
   "contributes": {
     "languages": [
       {
