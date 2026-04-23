@@ -49,6 +49,12 @@
         "scopeName": "source.rcss",
         "path": "./syntaxes/rcss.tmLanguage.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "rcss",
+        "path": "./snippets/rcss.json"
+      }
     ]
   }
 }
