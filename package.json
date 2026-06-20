@@ -2,7 +2,7 @@
   "name": "vscode-rmlui",
   "displayName": "RmlUi Support",
   "description": "Syntax support for RML and RCSS, assuming Lua scripting.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.107.0"
   },
