@@ -1,0 +1,382 @@
+{
+    ".dimensions (Context)": {
+        "prefix": ".dimensions",
+        "body": ".dimensions"
+    },
+    ".documents (Context)": {
+        "prefix": ".documents",
+        "body": ".documents"
+    },
+    ".dp_ratio (Context)": {
+        "prefix": ".dp_ratio",
+        "body": ".dp_ratio"
+    },
+    ".focus_element (Context)": {
+        "prefix": ".focus_element",
+        "body": ".focus_element"
+    },
+    ".hover_element (Context)": {
+        "prefix": ".hover_element",
+        "body": ".hover_element"
+    },
+    ".name (Context)": {
+        "prefix": ".name",
+        "body": ".name"
+    },
+    ".root_element (Context)": {
+        "prefix": ".root_element",
+        "body": ".root_element"
+    },
+    ":AddEventListener (Context)": {
+        "prefix": ":AddEventListener",
+        "body": ":AddEventListener(${1:event}, ${2:script}, ${3:element_context}, ${4:in_capture_phase})"
+    },
+    ":CreateDocument (Context)": {
+        "prefix": ":CreateDocument",
+        "body": ":CreateDocument(${1:tag})"
+    },
+    ":IsMouseInteracting (Context)": {
+        "prefix": ":IsMouseInteracting",
+        "body": ":IsMouseInteracting()"
+    },
+    ":LoadDocument (Context)": {
+        "prefix": ":LoadDocument",
+        "body": ":LoadDocument(${1:document_path})"
+    },
+    ":ProcessKeyDown (Context)": {
+        "prefix": ":ProcessKeyDown",
+        "body": ":ProcessKeyDown(${1:key_identifier}, ${2:key_modifier_state})"
+    },
+    ":ProcessKeyUp (Context)": {
+        "prefix": ":ProcessKeyUp",
+        "body": ":ProcessKeyUp(${1:key_identifier}, ${2:key_modifier_state})"
+    },
+    ":ProcessMouseButtonDown (Context)": {
+        "prefix": ":ProcessMouseButtonDown",
+        "body": ":ProcessMouseButtonDown(${1:button_index}, ${2:key_modifier_state})"
+    },
+    ":ProcessMouseButtonUp (Context)": {
+        "prefix": ":ProcessMouseButtonUp",
+        "body": ":ProcessMouseButtonUp(${1:button_index}, ${2:key_modifier_state})"
+    },
+    ":ProcessMouseLeave (Context)": {
+        "prefix": ":ProcessMouseLeave",
+        "body": ":ProcessMouseLeave()"
+    },
+    ":ProcessMouseWheel (Context)": {
+        "prefix": ":ProcessMouseWheel",
+        "body": ":ProcessMouseWheel(${1:delta}, ${2:key_modifier_state})"
+    },
+    ":ProcessTextInput (Context)": {
+        "prefix": ":ProcessTextInput",
+        "body": ":ProcessTextInput(${1:input})"
+    },
+    ":Render (Context)": {
+        "prefix": ":Render",
+        "body": ":Render()"
+    },
+    ":UnloadAllDocuments (Context)": {
+        "prefix": ":UnloadAllDocuments",
+        "body": ":UnloadAllDocuments()"
+    },
+    ":UnloadDocument (Context)": {
+        "prefix": ":UnloadDocument",
+        "body": ":UnloadDocument(${1:document})"
+    },
+    ":Update (Context)": {
+        "prefix": ":Update",
+        "body": ":Update()"
+    },
+    "document": {
+        "prefix": "document",
+        "body": "document"
+    },
+    ".context (Document)": {
+        "prefix": ".context",
+        "body": ".context"
+    },
+    ".title (Document)": {
+        "prefix": ".title",
+        "body": ".title"
+    },
+    ":Close (Document)": {
+        "prefix": ":Close",
+        "body": ":Close()"
+    },
+    ":CreateElement (Document)": {
+        "prefix": ":CreateElement",
+        "body": ":CreateElement(${1:tag_name})"
+    },
+    ":CreateTextNode (Document)": {
+        "prefix": ":CreateTextNode",
+        "body": ":CreateTextNode(${1:text})"
+    },
+    ":Hide (Document)": {
+        "prefix": ":Hide",
+        "body": ":Hide()"
+    },
+    ":PullToFront (Document)": {
+        "prefix": ":PullToFront",
+        "body": ":PullToFront()"
+    },
+    ":PushToBack (Document)": {
+        "prefix": ":PushToBack",
+        "body": ":PushToBack()"
+    },
+    ":Show (Document)": {
+        "prefix": ":Show",
+        "body": ":Show(nil, ${1:modal}, nil, ${2:focus})"
+    },
+    "element": {
+        "prefix": "element",
+        "body": "element"
+    },
+    ".attributes (Element)": {
+        "prefix": ".attributes",
+        "body": ".attributes"
+    },
+    ".child_nodes (Element)": {
+        "prefix": ".child_nodes",
+        "body": ".child_nodes"
+    },
+    ".class_name (Element)": {
+        "prefix": ".class_name",
+        "body": ".class_name"
+    },
+    ".client_height (Element)": {
+        "prefix": ".client_height",
+        "body": ".client_height"
+    },
+    ".client_left (Element)": {
+        "prefix": ".client_left",
+        "body": ".client_left"
+    },
+    ".client_top (Element)": {
+        "prefix": ".client_top",
+        "body": ".client_top"
+    },
+    ".client_width (Element)": {
+        "prefix": ".client_width",
+        "body": ".client_width"
+    },
+    ".first_child (Element)": {
+        "prefix": ".first_child",
+        "body": ".first_child"
+    },
+    ".id (Element)": {
+        "prefix": ".id",
+        "body": ".id"
+    },
+    ".inner_rml (Element)": {
+        "prefix": ".inner_rml",
+        "body": ".inner_rml"
+    },
+    ".last_child (Element)": {
+        "prefix": ".last_child",
+        "body": ".last_child"
+    },
+    ".next_sibling (Element)": {
+        "prefix": ".next_sibling",
+        "body": ".next_sibling"
+    },
+    ".offset_height (Element)": {
+        "prefix": ".offset_height",
+        "body": ".offset_height"
+    },
+    ".offset_left (Element)": {
+        "prefix": ".offset_left",
+        "body": ".offset_left"
+    },
+    ".offset_parent (Element)": {
+        "prefix": ".offset_parent",
+        "body": ".offset_parent"
+    },
+    ".offset_top (Element)": {
+        "prefix": ".offset_top",
+        "body": ".offset_top"
+    },
+    ".offset_width (Element)": {
+        "prefix": ".offset_width",
+        "body": ".offset_width"
+    },
+    ".owner_document (Element)": {
+        "prefix": ".owner_document",
+        "body": ".owner_document"
+    },
+    ".parent_node (Element)": {
+        "prefix": ".parent_node",
+        "body": ".parent_node"
+    },
+    ".previous_sibling (Element)": {
+        "prefix": ".previous_sibling",
+        "body": ".previous_sibling"
+    },
+    ".scroll_height (Element)": {
+        "prefix": ".scroll_height",
+        "body": ".scroll_height"
+    },
+    ".scroll_left (Element)": {
+        "prefix": ".scroll_left",
+        "body": ".scroll_left"
+    },
+    ".scroll_top (Element)": {
+        "prefix": ".scroll_top",
+        "body": ".scroll_top"
+    },
+    ".scroll_width (Element)": {
+        "prefix": ".scroll_width",
+        "body": ".scroll_width"
+    },
+    ".style (Element)": {
+        "prefix": ".style",
+        "body": ".style"
+    },
+    ".tag_name (Element)": {
+        "prefix": ".tag_name",
+        "body": ".tag_name"
+    },
+    ":AddEventListener (Element)": {
+        "prefix": ":AddEventListener",
+        "body": ":AddEventListener(${1:event}, ${2:listener}, ${3:in_capture_phase})"
+    },
+    ":AppendChild (Element)": {
+        "prefix": ":AppendChild",
+        "body": ":AppendChild(${1:element})"
+    },
+    ":Blur (Element)": {
+        "prefix": ":Blur",
+        "body": ":Blur()"
+    },
+    ":Click (Element)": {
+        "prefix": ":Click",
+        "body": ":Click()"
+    },
+    ":DispatchEvent (Element)": {
+        "prefix": ":DispatchEvent",
+        "body": ":DispatchEvent(${1:event}, ${2:parameters})"
+    },
+    ":Focus (Element)": {
+        "prefix": ":Focus",
+        "body": ":Focus()"
+    },
+    ":GetAttribute (Element)": {
+        "prefix": ":GetAttribute",
+        "body": ":GetAttribute(${1:name})"
+    },
+    ":GetElementById (Element)": {
+        "prefix": ":GetElementById",
+        "body": ":GetElementById(${1:id})"
+    },
+    ":GetElementsByTagName (Element)": {
+        "prefix": ":GetElementsByTagName",
+        "body": ":GetElementsByTagName(${1:tag_name})"
+    },
+    ":HasAttribute (Element)": {
+        "prefix": ":HasAttribute",
+        "body": ":HasAttribute(${1:name})"
+    },
+    ":HasChildNodes (Element)": {
+        "prefix": ":HasChildNodes",
+        "body": ":HasChildNodes()"
+    },
+    ":InsertBefore (Element)": {
+        "prefix": ":InsertBefore",
+        "body": ":InsertBefore(${1:element}, ${2:adjacent_element})"
+    },
+    ":IsClassSet (Element)": {
+        "prefix": ":IsClassSet",
+        "body": ":IsClassSet(${1:name})"
+    },
+    ":Matches (Element)": {
+        "prefix": ":Matches",
+        "body": ":Matches(${1:selectors})"
+    },
+    ":QuerySelector (Element)": {
+        "prefix": ":QuerySelector",
+        "body": ":QuerySelector(${1:selectors})"
+    },
+    ":QuerySelectorAll (Element)": {
+        "prefix": ":QuerySelectorAll",
+        "body": ":QuerySelectorAll(${1:selectors})"
+    },
+    ":RemoveAttribute (Element)": {
+        "prefix": ":RemoveAttribute",
+        "body": ":RemoveAttribute(${1:name})"
+    },
+    ":RemoveChild (Element)": {
+        "prefix": ":RemoveChild",
+        "body": ":RemoveChild(${1:element})"
+    },
+    ":ReplaceChild (Element)": {
+        "prefix": ":ReplaceChild",
+        "body": ":ReplaceChild(${1:inserted_element}, ${2:replaced_element})"
+    },
+    ":ScrollIntoView (Element)": {
+        "prefix": ":ScrollIntoView",
+        "body": ":ScrollIntoView(${1:align_with_top})"
+    },
+    ":SetAttribute (Element)": {
+        "prefix": ":SetAttribute",
+        "body": ":SetAttribute(${1:name}, ${2:value})"
+    },
+    ":SetClass (Element)": {
+        "prefix": ":SetClass",
+        "body": ":SetClass(${1:name}, ${2:value})"
+    },
+    "event": {
+        "prefix": "event",
+        "body": "event"
+    },
+    ".current_element (Event)": {
+        "prefix": ".current_element",
+        "body": ".current_element"
+    },
+    ".parameters (Event)": {
+        "prefix": ".parameters",
+        "body": ".parameters"
+    },
+    ".target_element (Event)": {
+        "prefix": ".target_element",
+        "body": ".target_element"
+    },
+    ".type (Event)": {
+        "prefix": ".type",
+        "body": ".type"
+    },
+    ":StopPropagation (Event)": {
+        "prefix": ":StopPropagation",
+        "body": ":StopPropagation()"
+    },
+    ":StopImmediatePropagation (Event)": {
+        "prefix": ":StopImmediatePropagation",
+        "body": ":StopImmediatePropagation()"
+    },
+    "rmlui": {
+        "prefix": "rmlui",
+        "body": "rmlui"
+    },
+    ".contexts (rmlui)": {
+        "prefix": ".contexts",
+        "body": ".contexts"
+    },
+    ".key_identifier (rmlui)": {
+        "prefix": ".key_identifier",
+        "body": ".key_identifier"
+    },
+    ".key_modifier (rmlui)": {
+        "prefix": ".key_modifier",
+        "body": ".key_modifier"
+    },
+    ":CreateContext (rmlui)": {
+        "prefix": ":CreateContext",
+        "body": ":CreateContext(${1:name}, ${2:dimensions})"
+    },
+    ":LoadFontFace (rmlui)": {
+        "prefix": ":LoadFontFace",
+        "body": ":LoadFontFace(${1:path}, ${2:fallback}, ${3:face_index})"
+    },
+    ":RegisterTag (rmlui)": {
+        "prefix": ":RegisterTag",
+        "body": ":RegisterTag(${1:tag})"
+    }
+}

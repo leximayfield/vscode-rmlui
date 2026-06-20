@@ -86,6 +86,9 @@
 				},
 				{
 					"include": "#at-keyframes"
+				},
+				{
+					"include": "#at-font-face"
 				}
 			]
 		},
@@ -137,7 +140,7 @@
 					"name": "punctuation.section.block.end.css"
 				}
 			},
-			"name": "meta.at-rule.media.header.css",
+			"name": "meta.at-rule.media.body.css",
 			"patterns": [
 				{
 					"include": "#comment-block"
@@ -172,7 +175,7 @@
 					"name": "punctuation.section.block.end.css"
 				}
 			},
-			"name": "meta.at-rule.keyframes.header.css",
+			"name": "meta.at-rule.keyframes.body.css",
 			"patterns": [
 				{
 					"include": "#comment-block"
@@ -185,6 +188,35 @@
 				},
 				{
 					"include": "#rule-block"
+				}
+			]
+		},
+		"at-font-face": {
+			"begin": "(@font-face)(.*)({)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.control.at-rule.css"
+				},
+				"2": {
+					"name": "meta.at-rule.font-face.header.css"
+				},
+				"3": {
+					"name": "punctuation.section.block.begin.css"
+				}
+			},
+			"end": "}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.section.block.end.css"
+				}
+			},
+			"name": "meta.at-rule.font-face.body.css",
+			"patterns": [
+				{
+					"include": "#comment-block"
+				},
+				{
+					"include": "#property"
 				}
 			]
 		},
